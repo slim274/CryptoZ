@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Layout</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 15px 9%;
+    padding-bottom: 100px;
+    background-color: blue;
+    height: 300px;
+    max-width: 1000px; 
+    margin: 100px auto;
+    border-radius: 50px;
+    position: relative;
+}
+
+.container .heading {
+    text-align: left;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 50px;
+}
+
+.container .heading-two {
+    text-align: left;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.container .box-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.container .box {
+    text-align: left;
+    flex: 1; /* Allow the box to grow */
+    margin-right: 190px; /* Add space between the box and images */
+}
+
+.container .box h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.container .box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btc img, .eth img, .luna img {
+    width: 100px;
+    position: absolute;
+}
+
+.btc img {
+    bottom: 270px;
+    right: 150px;
+}
+
+.eth img {
+    bottom: 150px;
+    left: 800px;
+}
+
+.luna img {
+    bottom: 150px;
+    left: 650px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container .box-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .container .box {
+        margin-bottom: 20px;
+        margin-right: 0; /* Remove right margin for the box in smaller screens */
+    }
+
+    .container .box h1 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .container .box button {
+        font-size: 14px; /* Adjust button font size for smaller screens */
+    }
+
+    .btc img, .eth img, .luna img {
+        display: none; /* Hide images on smaller screens */
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box-container">
+        <div class="box">
+            <h1 class="heading">Take your first step into safe, secure crypto investing</h1>
+            <button>Get Started</button>
+        </div>
+        <div class="btc">
+            <img src="btc.png" alt="BTC">
+        </div>
+        <div class="eth">
+            <img src="eth.png" alt="ETH">
+        </div>
+        <div class="luna">
+            <img src="luna.png" alt="LUNA">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

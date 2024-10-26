@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ 
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo">
+            <img src="img/Logo.jpg" alt="Cryptoz Logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#price">Price</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#support">Support</a></li>
+                <li class="mobile-only"><a href="#signin">Sign In</a></li>
+                <li class="mobile-only"><a href="#get-started" class="button">Get Started</a></li>
+            </ul>
+        </nav>
+        <div class="right-menu desktop-only">
+            <a href="#signin">Sign In</a>
+            <a href="#get-started" class="button">Get Started</a>
+        </div>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <main>
+
+      <section class="container-converter">
+        <div class="container">
+            <div class="left-content">
+                <h1>Your all-in-one platform,to buy, sell, trade, and  earn cryptocurrencies</h1>
+                <p>Open a free account in minutes right from your phone and make your money go further.</p>
+                <form class="email-signup">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Get Started</button>
+                </form>
+            </div>
+              <div class="image-btc">
+            <img src="img/Cam2.png" alt=""> 
+          </div>  
+            <div class="right-content">
+              
+               <h1>Currency Converter</h1>
+
+               <div class="controls" id="controls">
+               
+                <!-- <label for="">Convert from</label> -->
+                <label for="">Amount</label>
+                <div class="control">
+                  
+              <button id="base" data-drawer> USD</button>
+              <input type="number" id="base-input"  value="0" min="0"   step="0.01">
+                </div>
+                <!-- <label for="">Convert from</label> -->
+                <label for="">Converted to</label>
+                <div class="control">
+
+                    <button id="target" data-drawer>EUR</button>
+            
+                    <input type="number" id="target-input" value="0" min="0" readonly>
+                </div>
+                <label for="">Date</label>
+            
+                <div class="control">
+                  <input type="text" id="date">
+                  
+                  
+                   <i class="ri-arrow-drop-left-line"></i>
+                   
+               
+                  <i class="ri-calendar-todo-fill"></i>
+                  <i class="ri-arrow-right-s-line"></i>
+        
+              </div>
+
+              
+            <!--    <div >
+                <label for="">Date</label>
+                <input type="date">
+            </div> -->
+            <div class="image-eth">
+               <img  src="img/Cam1.png" alt="">
+            </div>
+               </div>
+
+
+               <div class="exchange-rate">
+                <h5>Current Rate</h5>
+                <span id="exchange-rate"> 1 USD = 0.0000 EUR</span>
+            </div>
+          
+            <div class="drawer" id="drawer">
+              
+                <div class="title">
+                    <button id="dismiss-btn"><span class="material-symbols-outlined">
+                        close
+                        </span></button>
+                    <h3>Select Currency</h3>
+                    
+                </div>
+                <div class="search">
+                    <input type="text" id="search" placeholder="search">
+                </div>
+                <ul class="currency-List" id="currency-List"> 
+                </ul>
+                    
+            </div>
+            </div>
+        </div>
+        
+    </main>
+  </section>
+
+
+  <section class="section-img">
+    <div class="container-img">
+        <img src="binance logo.jpg" alt="Binance Logo">
+        <img src="bitmex logo.png" alt="Bitmex Logo">
+        <img src="Group 96.jpg" alt="Group 96">
+        <img src="Group 97.png" alt="Group 97">
+        <img src="Group 98.png" alt="Group 98">
+    </div>
+</section>
+
+   <script src="scripts.js">
+
+
+            
+   </script>
+</body>
+</html>

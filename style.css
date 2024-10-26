@@ -1,0 +1,1512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  
+}
+
+/* start menu bar  */
+/* Sticky Header Styles */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+    
+}
+
+.nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-right: 20px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #007bff;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.right-menu a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.right-menu a.button,
+.nav-menu ul li a.button {
+    background-color: #2752E7;
+    color: white;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.right-menu a.button:hover,
+.nav-menu ul li a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Hamburger Menu Styles */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* End Menu bar */
+
+
+
+
+/* start Converter container */
+
+ .container-converter{
+   position: relative;
+    overflow: hidden;
+  } 
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: flex-start; /* Align items at the top */
+    max-width: 100%;
+    padding: 15px 5%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #2752E7; 
+    color: #fff;
+    height: 759px; 
+    max-width: 1300px;
+    position: relative;
+    z-index: 1;
+}
+
+/* start left-content */
+
+.left-content {
+   margin-top: 150px;
+    flex: 1;
+    padding-right: 30px; /* Adjust padding for spacing */
+    text-align: left; /* Align text to the left */
+}
+
+.left-content h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.email-signup {
+    display: flex;
+    max-width: 400px;
+    margin-top: 20px;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.email-signup input[type="email"] {
+    flex: 1;
+    padding: 18px 36px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-right: 10px; /* Adjust spacing between input and button */
+}
+
+.email-signup button {
+    padding: 18px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.image-btc img, .image-eth img{
+    width: 100px;
+}
+
+.image-btc{
+    position: relative;
+    left: 540px;
+    top: 60px;
+    
+    
+    }
+/* end of left -content */
+
+
+/* start right content - converter */
+
+.right-content {
+    margin-top: 94px;
+    margin-left: 20px;
+    flex: 1;
+    padding: 30px;
+    width: 10%;
+    max-width: 480px;
+    height: auto;
+    display: grid;
+    gap: 30px;
+    border-radius: 10px;
+    background-color: rgba(7, 15, 53, 0.5);
+    margin-left: 30px;
+    position: relative; /* Ensure positioning context for pseudo-elements */
+    overflow: hidden;
+}
+
+.right-content h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+
+}
+
+.controls{  /* sync icon */
+    display: grid;
+    gap: 20px;
+    position: relative;
+}
+
+.controls label{
+    margin: 5px 30px;
+    line-height: 0.7;
+}
+
+.control { /* button */
+    display: flex;
+    overflow: hidden;
+    background-color: rgb(223, 219, 219);
+    border-radius: 10px;/*  */
+}
+
+button {  /* usd eur button  */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.control button { /*  eur ud button */
+    --image: url(https://placehold.co/30/teal/white?text=$); /* dollar image */
+    font-weight: 600;
+    background: transparent;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10;
+    
+}
+
+
+.control button::before{ /* for the flag */
+     content: "";
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     background: var(--image);
+}
+
+.control button::after{ /*  downward arrow */
+font-size: 1.5rem;
+font-family: 'Material Symbols outlined';
+content: "\e5cf";
+}
+
+.control button:hover{
+color: green;
+
+}
+.control input{ /* both side to work on */
+    font-size: 1.1rem;
+    text-align: start;
+    background: transparent;
+    width: 100%;
+    padding:15px 20px ;
+    border: none;
+    outline: none;
+
+}
+
+
+
+  
+ 
+      .input-container {
+        position: relative;
+        width: 100%;
+      }
+      
+    
+      .input-container i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px; /* Adjust icon size */
+        cursor: pointer;
+      }
+      
+      .input-container .ri-arrow-drop-left-line {
+        left: -4px; /* Adjust based on padding */
+        color: #444546;
+        font-size: 30px;
+      }
+      
+      .input-container .ri-calendar-todo-fill {
+        right: 240px; /* Adjust based on padding */
+        color: #444546;
+        
+      }
+      
+      .input-container .ri-arrow-right-s-line {
+        right: 280px; /* Adjust based on padding */
+        color: #444546;
+      }
+      
+
+
+label {
+  position: relative;
+  right: 20px;
+}
+.control-date { /* button */
+    display: flex;
+    overflow: hidden;
+    background-color:  rgb(223, 219, 219);
+    border-radius: 10px;
+    
+}
+
+.control-date input{ /* both side to work on */
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: end;
+    background: transparent;
+    width: 100%;
+    position: relative;
+    right: 270px;
+    padding:15px 10px ;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+.control input::-webkit-inner-spin-button,
+.control input::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+
+
+.exchange-rate {
+    text-align: center;
+}
+
+.exchange-rate h5{
+    text-transform: uppercase;
+    color: red;
+}
+
+.exchange-rate span{
+margin-top: 5px;
+display: inline-block;
+}
+
+.drawer{
+position: absolute;
+inset: 0;
+background-color:rgb(3, 58, 37);
+opacity: 100%;
+padding: 20px;
+display: grid;
+align-content: start;
+gap: 20px;
+transform: translateY(100%);
+transition: transform .6s cubic-bezier(0.16, 1, 0.3, 1) ;
+
+}
+
+.drawer.show {
+transform: none;
+}
+
+.title{
+text-align: center;
+position: relative;
+}
+
+.title button{
+position: absolute;
+top: 50%;
+inset-inline-start: 0;
+transform: translateY(-50%);
+background: transparent;
+color: red;
+opacity:0.5 ;
+}
+
+.title button:hover{
+opacity: 1;
+}
+
+.search input{
+width: 100%;
+font-size: 1rem;
+padding: 10px 20px;
+border: 1px solid whitesmoke;
+border-radius: 10px;
+outline-color: green;
+
+}
+
+.currency-List{
+list-style-type: none;
+overflow-y: auto; /* make scroll */
+}
+
+.currency-List li{
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+padding-block: 5px;
+
+}
+
+.currency-List li:first-child{
+padding-block-start: 0; /* removing any padding at the top of the element in a horizontal writing mode. */
+}
+
+.currency-List *:not(li){
+pointer-events: none; /* enable user clicked item(currency) for  listed item from search bar */
+}
+
+.image-eth{
+    position: absolute;
+    right: 530px;
+    top: 550px;
+    z-index: 2;
+  } 
+
+  /* end of right-content */
+
+/* end of currency container */
+
+
+/* start exchanges container Images */
+.section-img {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    flex-wrap: nowrap;
+
+}
+
+.container-img img {
+    max-width: 100px; /* You can adjust this size as needed */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* End exchange container Images  */
+
+
+/* third container  */
+.container-item {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    border: 1px solid #e7d0d0; /* Border around the container */
+    border-radius: 8px; /* Rounded corners for container */
+    overflow: hidden; /* Hide overflow to prevent border overlapping */
+    padding: 20px;
+    max-width: 1300px;
+    margin: 20px auto;
+    
+}
+
+.item {
+    flex: 1; /* Each item takes equal space */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding for spacing */
+    border-right: 1px solid #ccc; /* Add separating line */
+}
+
+.item:last-child {
+    border-right: none; /* Remove border on the last item */
+}
+
+/* end of third container */
+
+
+
+
+/* start most trusted cryptocurrency container  */
+
+.section-content{
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:white;
+    color: #333;
+}
+
+.container-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.content {
+    flex: 1 1 60%;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+.content h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #050E2C;
+}
+
+.content p {
+    margin-top: 10px;
+    margin-left: 45px;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #7f8c8d;
+    max-width: 500px;
+}
+
+.content img {
+    max-width: 30px;
+    height: auto;
+    margin-right: 15px;
+   
+}
+
+.frame-img {
+    flex: 1 1 30%;
+    margin-left: 20px;
+    order: 2;
+}
+
+.frame-img img {
+    max-width: 100%;
+    height: 520px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* End most trusted cryptocurrency container  */
+
+
+
+/* start Grid container */
+
+.wrapper-card {
+    background: #D0DBFF; 
+    margin:100px auto;
+    height: auto;
+   padding: 20px;
+   max-width: 1300px;
+   margin: 0 auto;
+  
+}
+.wrapper {
+   max-width: 900px;
+   margin: 50px auto;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+   grid-gap: 10px;
+   padding: 0 20px;
+}
+
+.wrapper > div {
+   
+   border: 2px solid #ddd;
+   border-radius: 10px;
+   padding: 20px;
+   font-size: 1.2em;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper > div:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.frame-one {
+   grid-row: 1/4;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   background: #091951;
+}
+
+.frame-one img {
+   max-width: 90%;
+   border-radius: 10px 10px 0 0;
+   height: 300px;
+   margin: 30px;
+}
+
+.frame-one h2 {
+   font-size: 24px;
+   margin: 10px 0;
+   color: white;
+}
+
+.frame-one p {
+   font-size: 16px;
+   line-height: 1.5;
+   color: white;
+   text-align: justify;
+}
+
+.frame-two {
+   grid-column: 3 / 5;
+   grid-row:3;
+   display: flex;
+   align-items: center;
+   background: #F395D9;
+}
+
+.frame-three {
+   grid-column: 3 / 5;
+   grid-row:1/3;
+   display: flex;
+   align-items: center;
+   background: #F3DE95;
+}
+
+.frame-two img, .frame-three img {
+   max-width: 50%;
+   border-radius: 10px 0 0 10px;
+   margin-right: 20px;
+}
+
+.frame-two h2, .frame-three h2 {
+   font-size: 20px;
+   margin-bottom: 10px;
+}
+
+.frame-two h2 {
+   color: white;
+}
+
+.frame-three h2 {
+   color: #333;
+}
+
+.frame-two p, .frame-three p {
+   font-size: 14px;
+   line-height: 1.5;
+}
+
+.frame-two p {
+   color: white;
+}
+
+.frame-three p {
+   color: #050E2CB2;
+
+}
+
+/* start Grid container */
+
+/* start contaoner-features  */
+
+.container-features{
+   padding: 15px 9%;
+   padding-bottom: 100px;
+}
+
+.container-features .heading{
+   text-align: center;
+   padding-bottom: 15px;
+   color: black;
+   font-size: 50px;
+}
+
+.container-features .heading-two{
+   text-align: center;
+   padding-bottom: 15px;
+   color: white;
+   font-size: 20px;
+}
+
+.container-features .box-container {
+   display: grid;
+   margin-top: 40px;
+   grid-template-columns: repeat(auto-fit, minmax(270px,1fr));/* set it to vertical  */
+   gap: 15px;
+}   
+
+
+
+.container-features .box-container .box {
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+   background-color: white;
+   border-radius: 10px;
+   text-align: center;
+   padding: 30px 20px; /* space inside the box */
+
+}
+
+.container-features .box-container .box img {
+   width:40% ;
+}
+
+.container-features .box-container .box h3 {
+   color: #333;
+   font-size: 30px;
+   padding: 10px 0;/*  space btw texts */
+}
+
+.container-features .box-container .box p {
+   color: #333;
+   font-size: 15px;
+   line-height: 1.8;/*  space btw texts */
+}
+
+
+/* end cards */
+/* end Grid / features container */
+
+
+
+
+/* Start container what people say */
+
+.container-header{
+    margin-top: 50px;
+}
+ .container-header h1  {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px;
+    padding: 0 20px; 
+    max-width: 1200px;
+    margin: 50px auto;
+    align-items: start;
+    
+}
+
+
+.card {
+    border-radius: 10px;
+    border: 2px solid rgb(241, 232, 232);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position:relative; 
+
+}
+
+
+.card:nth-of-type(5) {
+    bottom: 20px;
+  
+}
+
+.card:nth-of-type(6) {
+    bottom: 110px;
+}
+
+.card:nth-of-type(8) {
+  bottom: 90px;
+}
+
+.card:nth-of-type(9) {
+    filter: blur(5px);
+}
+.card:nth-of-type(10) {
+
+    bottom: 90px;
+    filter: blur(5px);
+}
+
+.card:nth-of-type(11) {
+    filter: blur(5px);
+}
+
+.card:nth-of-type(12) {
+    bottom: 60px;
+    filter: blur(5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.card-header img {
+    border-radius: 50%;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.card-header .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header h3 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.card-header h5 {
+    font-size: 0.7em;
+    margin: 5px 0 0;
+    color: #555;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #333;
+    text-align: left;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+/*End container what people say */
+
+
+/* start container-started  */
+.container-started {
+    padding: 15px 5%;
+    padding-bottom: 100px;
+    background-color: #2752E7;
+    height: 300px;
+    max-width: 1000px; 
+    margin: 100px auto;
+    position: relative;
+    border-radius: 20px;
+}
+
+.container-started .heading {
+    text-align: left;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 50px;
+}
+
+.container-started .heading-two {
+    text-align: left;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.container-started .box-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.container-started .box {
+    text-align: left;
+    flex: 1; /* Allow the box to grow */
+    margin-right: 300px; /* Add space between the box and images */
+}
+
+.container-started .box h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.container-started .box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 10px;
+
+}
+
+.btc img, .eth img, .luna img {
+    width: 100px;
+    position: absolute;
+}
+
+.btc img {
+    bottom: 270px;
+    right: 150px;
+}
+
+.eth img {
+    bottom: 150px;
+    left: 800px;
+}
+
+.luna img {
+    bottom: 150px;
+    left: 650px;
+}
+
+
+/* End container-started  */
+
+
+/* Footer section */
+ footer {
+        background-color: #2752E7;
+        padding: 50px;
+        text-align: left;
+        margin: 50px auto;
+        max-width: 1300px;
+        border-radius: 20px;
+
+    }
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .footer-section {
+        flex: 1 1 200px;
+        max-width: 20%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .footer-section h3 {
+        margin-bottom: 20px;
+        color: white;
+    }
+    .footer-section a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 15px;
+    }
+    .footer-section p {
+        color: white;
+        margin-bottom: 10px;
+    }
+    .footer-section img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    .footer-center {
+        text-align: center;
+        color: white;
+    }
+    .footer-center img {
+        margin: 10px auto;
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid white;
+        margin: 20px 0;
+    }
+
+/* End Footer section */
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Responsive menu bar */
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu ul.active {
+        display: flex;
+    }
+
+    .nav-menu ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu.active .bar:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .bar:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    /*  end menu bar  */
+
+
+/* Mobile responsive Converter Container */
+    .container-converter{
+        height: auto;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+
+    .left-content,
+    .right-content {
+        margin: 0;
+        width:390px;
+        height: auto;
+        margin-bottom: 30px; /* Adjust margin for spacing */
+        text-align: center; /* Center align text on smaller screens */
+    }
+    
+    .left-content h1{
+      margin-top: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .left-content p{
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .email-signup {
+        width: 100%;
+        flex-direction: column; /* Stack form elements vertically */
+        align-items: center;   /* Center align items */
+    }
+    .email-signup input[type="email"] {
+        margin-right: 0;
+        margin-bottom: 10px; /* Adjust spacing */
+        padding: 15px 70px;
+    }
+   
+    .email-signup button {
+      padding: 12px 120px;
+      margin-top: 10px;
+     }
+
+    .control input{ /* both side to work on */
+    font-size: 0.9rem; 
+    }
+
+    label {
+     text-align: left;
+     }
+
+  .input-container .ri-calendar-todo-fill {
+    right: 180px; /* Adjust based on padding */
+    color: #444546;
+  }
+  
+  .input-container .ri-arrow-right-s-line {
+    right: 210px; /* Adjust based on padding */
+    color: #444546;
+  }
+  
+
+.image-btc, .image-eth {
+display: none;
+}
+
+.control button::after{ /*  downward arrow */
+font-size: 0.9rem;
+font-family: 'Material Symbols outlined';
+content: "\e5cf";
+}
+
+
+.control button { /*  eur ud button */
+    font-size: 10px;
+}
+
+
+/* end of start Converter container  */
+
+/* start exchanges container Images */
+.container-img {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container-img img {
+    flex: 1 1 calc(2% - 20px);
+}
+
+/* End exchanges container Images */
+
+
+/* start container items */
+.container-item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    margin: 40px;
+}
+
+.item {
+    border-right: none; /* Remove border on smaller screens */
+    border-bottom: 1px solid #ccc; /* Add separating line between items */
+    padding: 20px; /* Adjust padding for spacing */
+    text-align: center; /* Align text to the left */
+}
+
+.item:last-child {
+    border-bottom: none; /* Remove border on the last item */
+}
+
+/* End container items  */
+
+
+
+/* start most trusted cryptocurrency container  */
+
+.container-content {
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+    margin-top: auto;
+   
+}
+
+.frame-img {
+    order: -1;
+    margin-bottom: 20px;
+    max-width: 100%;
+    margin-left: 0;
+    
+}
+
+.content, .frame-img {
+    width: 100%;
+    margin-left: 0;
+}
+
+.content h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.content h2 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.content h2 img {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 30px;
+}
+
+.content p {
+    margin-left: 0;
+    font-size: 15px;
+}
+/* start most trusted cryptocurrency container  */
+
+
+/* start Grid container */
+
+ .frame-one, .frame-two, .frame-three { 
+   bottom: 0;
+} 
+ /* End Grid container */
+
+
+ /* start features container  */
+.container-features {
+    padding: 20px;
+}
+
+.container-features .heading {
+font-size: 30px;
+}
+
+.container-features .heading-two {
+    font-size: 20px;       
+    }
+
+/* End features container*/
+
+
+/* start container-started*/
+.container-started {
+    padding: 20px;
+}
+
+.container-started .box-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.container-started .box {
+    margin-bottom: 20px;
+    margin-right: 0; /* Remove right margin for the box in smaller screens */
+    text-align: center;
+}
+
+.container-started .box h1 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container-started .box button {
+    font-size: 14px; /* Adjust button font size for smaller screens */
+    margin: 0 auto;
+    padding: 10px 100px;
+}
+
+.btc img, .eth img, .luna img {
+    display: none; /* Hide images on smaller screens */
+}
+/* End container-started */
+
+
+/* START FOOTER SECTION */
+
+  .footer-section {
+            max-width: 45%;
+        }
+
+        footer {
+            margin: 10px;
+        }
+
+/* END OF FOOTER SECTION */
+
+}
+
+/* Menu bar */
+@media screen and (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+    
+/* End Menubar */
+}
+
+@media  (max-width: 1280px) {
+
+    .container-card{
+        padding: 15px;
+    }
+    .container-img {
+        gap: 50px;
+    }
+
+.image-btc{
+    position: relative;
+    left: 540px;
+    top: 60px;
+    
+    
+    }/* take it up */
+
+
+    .image-eth{
+      position: absolute;
+      right: 80px;
+      top: 620px;
+      z-index: 2;
+    } 
+
+  
+}
+@media (min-width: 1025px) {
+    .container-card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+
+}
+
+@media (max-width: 1024px) {
+
+      
+      .input-container .ri-calendar-todo-fill {
+        right: 100px; /* Adjust based on padding */
+        color: #444546;
+        
+      }
+      
+      .input-container .ri-arrow-right-s-line {
+        right: 130px; /* Adjust based on padding */
+        color: #444546;
+      }
+      
+
+    .image-btc, .image-eth{
+        display: none;
+    }
+    
+    .container-card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+}
+
+
+
+@media (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        padding: 10px 1%;
+        gap: 5px;
+            
+    }
+   
+
+    .wrapper-card{
+        height: auto;
+        margin-top: 10px;
+      /*   padding: 10px 20px; */
+      /* margin-right: 50px; */
+        
+       
+    }
+    .frame-one, .frame-two, .frame-three {
+        grid-column:6;
+        grid-row: auto;
+        flex-direction: column;
+        text-align: center;
+       
+    
+    }
+
+    .frame-one img {
+        max-width: 100%;
+        height: 300px;
+        margin: 0 0 20px 0;
+       
+    }
+
+    .frame-two img, .frame-three img {
+        max-width: 100%;
+        height: 400px;
+        margin: 0 0 20px 0;
+        
+        
+    }
+
+    .frame-two, .frame-three {
+        align-items: center;
+    }
+
+    .frame-one h2, .frame-two h2, .frame-three h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.frame-one p, .frame-two p, .frame-three p {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* what people say */
+.container-card {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px 0;
+    align-items: stretch;
+    margin-top: 10px;
+   
+}
+
+.card {
+    flex: 0 0 100%;
+    margin: 0 10px;
+    box-sizing: border-box;
+    bottom: 0;
+    top: 0;
+    filter: none;
+    
+}
+.card:nth-of-type(5), .card:nth-of-type(6) , .card:nth-of-type(8), .card:nth-of-type(9),
+.card:nth-of-type(11), .card:nth-of-type(12){
+bottom: 0;
+top: 0;
+
+}
+
+
+
+
+/* end of what peep say */
+
+}
+
+@media (max-width: 468px) {
+     .frame-one, .frame-two, .frame-three {
+        grid-column:1;
+        bottom: 100px;
+        right: 5px;
+    
+    }
+
+      .input-container .ri-calendar-todo-fill {
+        right: 180px; /* Adjust based on padding */
+        color: #444546;
+        
+      }
+      
+      .input-container .ri-arrow-right-s-line {
+        right: 210px; /* Adjust based on padding */
+        color: #444546;
+      }
+      
+      .card {
+        filter: none;
+
+}
+
+}
+   @media (max-width: 480px) {
+
+    /* FOOTER SECTION */
+        .footer-section {
+            flex: 1 1 100%;
+            max-width:300px; 
+        }
+
+        footer {
+            margin: 10px;
+        }
+       /* END OF FOOTER SECTION */
+
+
+       .card {
+        filter: none;
+   }
+
+
+   }
